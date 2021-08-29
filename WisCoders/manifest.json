@@ -1,0 +1,40 @@
+{
+    "name": "FIS-Extension",
+    "description": "Your Financial Dicitionary!",
+    "version": "0.1",
+    "manifest_version": 3,
+    "action": {
+        "default_popup": "popup.html",
+        "default_icon": {
+            "16": "hedgehog.png",
+            "32": "hedgehog.png",
+            "48": "hedgehog.png",
+            "128": "hedgehog.png"
+        }
+    },
+    "icons": {
+        "16": "hedgehog.png",
+        "32": "hedgehog.png",
+        "48": "hedgehog.png",
+        "128": "hedgehog.png"
+    },
+    "background": {
+        "service_worker": "background_worker.js"
+    },
+    "content_scripts": [
+        {
+            "matches": [
+                "<all_urls>"
+            ],
+            "js": [
+                "content_script.js"
+            ]
+        }
+    ],
+    "permissions": [
+        "storage",
+        "tabs",
+        "activeTab",
+        "scripting"
+    ]
+}
